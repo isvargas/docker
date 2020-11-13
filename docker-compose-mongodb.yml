@@ -1,6 +1,6 @@
 # Use root/example as user/password credentials
-# rodar: docker-compose -f stack-mongo.yml up
-# ou docker deploy -c stack-mongo.yml mongo
+# rodar: docker-compose -f docker-compose-mongodb.yml up
+# ou docker deploy -c docker-compose-mongodb.yml mongo
 version: '3.1'
 
 services:
