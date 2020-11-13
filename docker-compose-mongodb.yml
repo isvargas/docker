@@ -1,4 +1,4 @@
-# Cria dois containers conectados: Mongo (DB server) e
+# Instancia dois containers conectados: Mongo (DB server) e
 # Mongo-Express, um DB client web.
 # rodar: docker-compose -f docker-compose-mongodb.yml up
 # ou docker deploy -c docker-compose-mongodb.yml mongo
