@@ -82,3 +82,18 @@ A partir daqui você pode acessar http://127.0.0.1 que vai cair na porta 80 do c
 4. No servidor destino, importar a nova imagem:
 
 #docker load < nome_imagem.tar
+
+# AUTOMATIZANDO CRIAÇÃO DE IMAGENS E CONTAINERS
+
+1. Criar imagens com base em um Dockerfile:
+
+#docker build -t nome_image . 
+
+2. Instanciar containers pelo composer com base em um arquivo .yml
+
+#docker-compose -f arquivo.yml
+
+ou:
+
+#docker deploy -c arquivo.yml
+
