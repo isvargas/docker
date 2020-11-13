@@ -83,7 +83,7 @@ A partir daqui você pode acessar http://127.0.0.1 que vai cair na porta 80 do c
 
 #docker load < nome_imagem.tar
 
-# AUTOMATIZANDO CRIAÇÃO DE IMAGENS E CONTAINERS
+# AUTOMATIZANDO A CRIAÇÃO DE IMAGENS E CONTAINERS
 
 1. Criar imagens com base em um Dockerfile:
 
