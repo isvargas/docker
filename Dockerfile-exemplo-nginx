@@ -1,0 +1,17 @@
+#Exemplo para criar uma imagem com Dockerfile
+#Fonte deste arquivo: https://blog.matheuscastiglioni.com.br/criando-minha-primeira-imagem-com-docker/ 
+#Para gerar a imagem: 
+#> docker build -t nome_imagem .
+#Para gerar o container: 
+#>docker run -d -p 80:80 --name meu-site -e API_URL=http://api.meusite.com.br/api/ -v $PWD/site/arquivos:/home/site/arquivos
+FROM nginx
+LABEL version="1.0.0" description="Disponibilizando site com NGINX" maintainer="Matheus Castiglioni<matheushcastiglioni@gmail.com>"
+RUN cd / && mkdir Arquivos && chmod 777 -R Arquivos/
+COPY ./site/index.html /usr/share/nginx/html/
+VOLUME /Arquivos/
+EXPOSE 80
+ENV API_URL=http://localhost:8000/api/
+ENV API_BANCO=meu_site
+WORKDIR /usr/share/nginx/html/
+ENTRYPOINT ["/usr/sbin/nginx"]
+CMD ["-g", "daemon off;"]
